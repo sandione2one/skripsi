@@ -1,0 +1,67 @@
+{% extends "data/main.html" %}
+{% block content %}
+{% load static %}
+<div class="pcoded-content">
+    <div class="pcoded-inner-content">
+        <div class="main-body">
+            <div class="page-wrapper">
+
+                <style>
+                    .img-responsive {
+                        max-width: 100px;
+                        max-height: 100px;
+                        margin: 0 auto;
+                    }
+                </style>
+
+                <div class="page-body">
+                    <!-- Basic table card start -->
+                    <div class="card">
+                        <div class="text-center">
+                            <img class="img-fluid" src="{% static 'images/logo.png' %}" width="150px">
+                        </div>
+                        <div class="text-center">
+                            <h5 class="align-center"> SMP TARUNA ISLAMI AL-KAUTSAR<h5>
+                        </div>
+                        <div class="card-block table-border-style">
+                            <div class="table-responsive">
+                                <div class="card-body">
+                                    <a href="{% url 'datadoku'  %}" type="button" class="btn btn-primary"> Tambah Siswa</a>
+                                    <br/>
+                                        
+                                    </div>
+                                <table class="table" >
+                                    <thead>
+                                        <tr class="bg-inverse">
+                                            <th>No</th>
+                                            <th>Nama</th>
+                                            <th>Ijazah</th>
+                                            <th>KK</th>
+                                            <th >SKL</th>
+                                            <th class="text-center">Aksi</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for datadoku in doku %}
+                                        <tr>
+                                            <td>{{ forloop.counter }}</td>
+                                            <td>{{ datadoku.nama }}</td>
+                                            <td><img class="img-responsive" src="{{datadoku.ijazah.url}}"></td>
+                                            <td><img class="img-responsive" src="{{datadoku.kk.url}}"></td>
+                                            <td><img class="img-responsive" src="{{datadoku.skl.url}}"></td>
+                                            <td><a href="{% url 'updatedoku' datadoku.id %}" class="btn btn-primary btn-sm" >Ubah</a> | <a href="{% url 'deletedoku' datadoku.id %}" class="btn btn-danger btn-sm">Hapus</a></td>
+                                        </tr>
+
+                                    {% empty %}
+                                        <tr>
+                                            <td colspan="6" align="center"> Data Masih Kosong</td>
+                                        </tr>
+
+                                    {% endfor %}
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Basic table card end -->
+                    {% endblock content %}

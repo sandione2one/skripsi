@@ -1,0 +1,69 @@
+<html>
+<head>
+    <style>
+        @page {
+            size: a4 portrait;
+
+            @frame header_frame {
+                /* Static Frame */
+                -pdf-frame-content: header_content;
+                left: 50pt;
+                width: 512pt;
+                top: 50pt;
+                height: 40pt;
+            }
+
+            @frame content_frame {
+                /* Content Frame */
+                left: 50pt;
+                width: 512pt;
+                top: 90pt;
+                height: 632pt;
+            }
+
+            @frame footer_frame {
+                /* Another static Frame */
+                -pdf-frame-content: footer_content;
+                left: 50pt;
+                width: 512pt;
+                top: 772pt;
+                height: 20pt;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Data Ortu</h2>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Nama Siswa</th>
+            <th>Nama Ayah</th>
+            <th>NIK Ayah</th>
+            <th>Nama Ibu</th>
+            <th>NIK Ibu</th>
+            <th>Nama Wali Murid</th>
+            <th>NIK Wali Murid</th>
+            
+        </tr>   
+    </thead>
+    <tbody>
+    {% for ortu in laporan %}
+    <tr>
+        <td align="center">{{ortu.nama}}</td>
+        <td align="center">{{ortu.namaay}}</td>
+        <td align="center">{{ortu.nikay}}</td>
+        <td align="center">{{ortu.namaib}}</td>
+        <td align="center">{{ortu.nikib}}</td>
+        <td align="center">{{ortu.namawal}}</td>
+        <td align="center">{{ortu.nikwal}}</td>
+     
+               
+    </tr>  
+    {% endfor %}
+    </tbody>    
+</table>
+</body>
+
+</html>

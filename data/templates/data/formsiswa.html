@@ -1,0 +1,66 @@
+{% extends "data/main.html" %}
+{% block content %}
+{% load static %}
+<div class="pcoded-content">
+    <div class="pcoded-inner-content">
+        <div class="main-body">
+            <div class="page-wrapper">
+
+                <div class="page-body">
+                    <!-- Basic table card start -->
+                    <div class="card">
+                        <div class="text-center">
+                            <img class="img-fluid" src="{% static 'images/logo.png' %}" width="150px">
+                        </div>
+                        <div class="text-center">
+                            <h5 class="align-center"> SMP TARUNA ISLAMI AL-KAUTSAR<h5>
+                        </div>
+                        <div class="card-block table-border-style">
+                            <div class="table-responsive">
+                                <div class="card-body">
+                                    <a href="{% url 'inputsiswa'  %}" type="button" class="btn btn-primary"> Tambah Siswa</a>
+                                    <br/>
+                                        
+                                    </div>
+                                <table class="table" >
+                                    <thead>
+                                        <tr class="bg-inverse">
+                                            <th>No</th>
+                                            <th>NPS</th>
+                                            <th>Nama</th>
+                                            <th>Alamat</th>
+                                            <th>Jenis Kelamin</th>
+                                            <th class="text-center">Asal Sekolah</th>
+                                            <th>Status</th>
+                                            <th class="text-center">Aksi</th>
+                                            <th>Cetak</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for datasiswa in siswa %}
+                                        <tr>
+                                            <td>{{ forloop.counter }}</td>
+                                            <td>{{ datasiswa.user }}</td>
+                                            <td>{{ datasiswa.nama }}</td>
+                                            <td>{{ datasiswa.alamat }}</td>
+                                            <td>{{ datasiswa.jenla }}</td>
+                                            <td>{{ datasiswa.asal }}</td>
+                                            <td>{{ datasiswa.status }}</td>
+                                            <td><a href="{% url 'updatesiswa' datasiswa.id %}" class="btn btn-primary btn-sm" >Ubah</a> | <a href="{% url 'deletesiswa' datasiswa.id %}" class="btn btn-danger btn-sm">Hapus</a>
+                                                </td></td>
+                                             <td><a href="{% url 'cetak' %}" class="btn btn-info btn-skew">Cetak</a></td>   
+                                        </tr>
+
+                                    {% empty %}
+                                        <tr>
+                                            <td colspan="6" align="center"> Data Masih Kosong</td>
+                                        </tr>
+
+                                    {% endfor %}
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Basic table card end -->
+                    {% endblock content %}

@@ -1,0 +1,44 @@
+{% extends "data/mainsis.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% load static %}
+<div class="pcoded-content">
+    <div class="pcoded-inner-content">
+        <div class="main-body">
+            <div class="page-wrapper">
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center;"><b> Identitas </b></h4>
+                        <hr>
+                        <table>
+                            <tr>
+                                <td width="100px">Nama</td>
+                                <td width="30px">:</td>
+                                <td>{{request.user.siswa}}</td>
+                            </tr>
+                            <tr>
+                                
+                            </tr>
+                            <tr></tr>
+                            <tr>
+                                <td><a href="{{ pembayaran.pembayaran }}" class="btn btn-warning">bayar</a></td>
+                            </tr>
+                            <tr>
+                                
+                            </tr>
+                            <tr>
+                            
+                            <td>:</td>
+                                <td>
+                                </td>
+                            </tr>
+                        </table>
+
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+
+{% endblock content %}

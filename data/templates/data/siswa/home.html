@@ -1,0 +1,76 @@
+{% extends "data/mainsis.html" %}
+{% block content %}
+{% load static %}
+<div class="pcoded-content">
+    <div class="pcoded-inner-content">
+        <div class="main-body">
+            <div class="page-wrapper">
+
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h5>Formulir Siswa</h5>
+                            <hr>
+                            <div class="card card-body" >
+                                <a class="btn btn-inverse btn-sm btnblock" href="{% url 'isidatasiswa' %}">Form Data Diri</a>
+                                <div class="text-center" >
+                                    <div style="background: rgb(35, 173, 69);">
+                                        <img class="img-fluid" src="{% static 'images/profile.png' %}" width="150px">
+                                        <br>
+                                        <h5><b style="color: azure;">Data Diri</b></h5>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <h5>Formulir Orang Tua</h5>
+                            <hr>
+                            <div class="card card-body">
+                                <a class="btn btn-inverse btn-sm btnblock" href="{% url 'inputortu' %}">Form Orang Tua</a>
+                                <div style="background: rgb(7, 131, 118);">
+                                    <div class="text-center" >
+                                        <img class="img-fluid" src="{% static 'images/orang.png' %}" width="150px">
+                                        <br>
+                                        <h5><b style="color: azure;">Data Orang Tua</b></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <h5>Kelengkapan Dokumen</h5>
+                            <hr>
+                            <div class="card card-body" >
+                                <a class="btn btn-inverse btn-sm btnblock" href="{% url 'uploaddoku' %}">Form Dokumen</a>
+                                <div class="text-center" >
+                                    <div style="background: rgb(46, 1, 61);">
+                                        <img class="img-fluid" src="{% static 'images/doc.png' %}" width="150px">
+                                        <br>
+                                        <h5><b style="color: azure;">Data Dokumen</b></h5>
+                                    </div>
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <h5>Pembayaran Online</h5>
+                            <hr>
+                            <div class="card card-body">
+                                <a class="btn btn-inverse btn-sm btnblock" href="">Pembayaran</a>
+                                <div style="background: rgb(10, 22, 116);">
+                                    <div class="text-center" >
+                                        <img class="img-fluid" src="{% static 'images/bayar.png' %}" width="150px">
+                                        <br>
+                                        <h5><b style="color: azure;">Data Pembayaran</b></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+{% endblock content %}

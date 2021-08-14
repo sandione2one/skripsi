@@ -1,0 +1,41 @@
+{% extends "data/mainsis.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% load static %}
+<div class="pcoded-content">
+    <div class="pcoded-inner-content">
+        <div class="main-body">
+            <div class="page-wrapper">
+
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center;"><b> Identitas </b></h4>
+                        <hr>
+                        <table>
+                            <tr>
+                                <td width="100px">Nama</td>
+                                <td width="30px">:</td>
+                                <td>{{request.user.siswa}}</td>
+                            </tr>
+                            <tr>
+                                
+                            </tr>
+                            <tr>
+                            <td>Status</td>
+                            <td>:</td>
+                                <td>{% if pengumuman.status == True %}
+                                    <font color="green" size="5">LULUS</font>
+                                    {% else %}
+                                    <font color="red" size="5">TIDAK LULUS</font>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        </table>
+
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+
+{% endblock content %}

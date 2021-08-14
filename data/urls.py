@@ -1,0 +1,37 @@
+from django.urls import path
+from .import views
+
+urlpatterns = [
+    path('', views.beranda, name='beranda'),
+    path('formsiswa/', views.formsiswa, name='formsiswa'),
+    path('formortu/', views.formortu, name='formortu'),
+    path('pengum/', views.pengum, name='pengum'),
+    path('bayar/', views.bayar, name='bayar'),
+    path('register/', views.register, name='register'),
+    path('login/', views.loginPage, name='login'),
+    path('logout/', views.logoutPage, name='logout'),
+    path('inputsiswa/', views.inputsiswa, name='inputsiswa'),
+    path('inputpengumuman/', views.inputpengumuman, name='inputpengumuman'),
+    path('updatesiswa/<str:pk>', views.updatesiswa, name='updatesiswa'),
+    path('updatepengumuman/<str:pk>', views.updatepengumuman, name='updatepengumuman'),
+    path('updateortu/<str:pk>', views.updateortu, name='updateortu'),
+    path('updatedoku/<str:pk>', views.updatedoku, name='updatedoku'),
+    path('deletesiswa/<str:pk>', views.deletesiswa, name='deletesiswa'),
+    path('deletepengumuman/<str:pk>', views.deletepengumuman, name='deletepengumuman'),
+    path('deleteortu/<str:pk>', views.deleteortu, name='deleteortu'),
+    path('deletedoku/<str:pk>', views.deletedoku, name='deletedoku'),
+    path('dataortu/', views.dataortu, name='dataortu'),
+    path('datadoku/', views.datadoku, name='datadoku'),
+    path('formdoku/', views.formdoku, name='formdoku'),
+    path('home/', views.homePage, name='home'),
+    path('cetak/', views.pdflap, name="cetak"),
+    path('ceta/', views.pdf, name="ceta"),
+    # Siswa
+    path('isidatasiswa/', views.isidatasiswa, name='isidatasiswa'),
+    path('uploaddoku/', views.uploaddoku, name='uploaddoku'),
+    path('inputortu/', views.inputortu, name='inputortu'),
+    path('data/', views.data, name='data'),
+    path('pengumuman/', views.pengumuman, name='pengumuman'),
+    path('pembayaran/', views.pembayaran, name='pembayaran'),
+    path('profile/', views.profile, name='profile'),
+]

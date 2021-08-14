@@ -1,0 +1,66 @@
+{% extends "data/mainsis.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% load static %}
+<div class="pcoded-content">
+    <div class="pcoded-inner-content">
+        <div class="main-body">
+            <div class="page-wrapper">
+
+              
+                <div style="text-align: center;">
+                  <h1><b>Selamat Datang</b></h1>
+                  <p>Kepada para calon pendaftar di website pendaftaran SMP TARUNA ISLAMI AL-KAUTSAR </p>
+                </div>
+                <br>
+                <div class="card mb-3">
+                    <img class="card-img-top" src="{% static 'images/aa.jpg' %}" height="300px">
+                    <div class="card-body">
+                      <div style="text-align: center;">
+                        <h3 class="card-title"><b> VISI MISI </b></h3><br>
+                        <p class="card-text">" BERPRESTASI, TERAMPIL, BERKEPRIBADIAN ISLAM DAN  BERBUDAYA LINGKUNGAN "</p>
+                        <br>
+                     </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <h5>Formulir YANG TERSEDIA</h5>
+                                <hr>
+                                <div class="card card-body">
+                                  <a>* Data Diri</a>
+                                  <a>* Data Orang Tua</a>
+                                  <a>* Dokumen</a>
+                                  <a>* Pembayaran</a>
+                              </div>
+                            </div>
+                            <div class="col-md-5">
+                                <h5>KELENGKAPAN DOKUMEN</h5>
+                                <hr>
+                                <div class="card card-body">
+                                    <a>* Surat Keteerangan Lulus (SKL)</a>
+                                    <a>* Ijazah</a>
+                                    <a>* Foto</a>
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card mb-3">
+                    <div class="card-body">
+                        <h4 class="card-title" style="text-align: center;"><b> HUBUNGI KAMI </b></h4><hr>
+                        <p class="ti-location-pin">     Lokasi : Semampir-Kraksaan</p><br>
+                        <p class="ti-email">     E-mail : Taruna@gm.com</p><br>
+                        <p class="ti-mobile">     Telepon : 085123452998</p><br>
+
+                        <br>
+                     </div>
+                    </div>
+                  </div>
+
+
+{% endblock content %}
